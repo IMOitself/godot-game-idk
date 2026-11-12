@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://cowqwac3otksl"]
+
+[ext_resource type="Texture2D" uid="uid://b5orjrkjd3va0" path="res://assets/bg_forest.jpg" id="1_iywne"]
+[ext_resource type="Texture2D" uid="uid://b1i6lhxea08jr" path="res://assets/bg_forest_out.jpg" id="2_p57ef"]
+[ext_resource type="Texture2D" uid="uid://cd8inmfigvrcp" path="res://assets/bg_plains.jpg" id="3_u5sy4"]
+[ext_resource type="Texture2D" uid="uid://1ay7jve8ku8m" path="res://assets/bg_city_entrance.jpg" id="4_gee14"]
+[ext_resource type="PackedScene" uid="uid://dodhu7r74t05d" path="res://scenes/player.tscn" id="5_0tnpc"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e2o6t"]
+texture = ExtResource("1_iywne")
+texture_region_size = Vector2i(2048, 2048)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eow3j"]
+texture = ExtResource("2_p57ef")
+texture_region_size = Vector2i(2048, 2048)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j5wjh"]
+texture = ExtResource("3_u5sy4")
+texture_region_size = Vector2i(2048, 2048)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vef74"]
+texture = ExtResource("4_gee14")
+texture_region_size = Vector2i(2048, 2048)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_jpwme"]
+tile_size = Vector2i(2048, 2048)
+sources/0 = SubResource("TileSetAtlasSource_e2o6t")
+sources/4 = SubResource("TileSetAtlasSource_eow3j")
+sources/5 = SubResource("TileSetAtlasSource_j5wjh")
+sources/6 = SubResource("TileSetAtlasSource_vef74")
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jpwme"]
+distance = 2.0
+
+[node name="game" type="Node2D" unique_id=49382964]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=309437503]
+tile_map_data = PackedByteArray(0, 0, 253, 255, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_jpwme")
+
+[node name="Player" parent="." unique_id=2029330779 instance=ExtResource("5_0tnpc")]
+position = Vector2(494, 1147)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1014283575]
+position = Vector2(4, 58)
+limit_top = 0
+limit_bottom = 2048
+position_smoothing_enabled = true
+
+[node name="ground" type="StaticBody2D" parent="." unique_id=966350619]
+position = Vector2(302, 1322)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground" unique_id=1408481169]
+position = Vector2(0, 155)
+shape = SubResource("WorldBoundaryShape2D_jpwme")
