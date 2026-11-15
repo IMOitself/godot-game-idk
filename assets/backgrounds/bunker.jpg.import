@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1i6lhxea08jr"
-path="res://.godot/imported/bg_forest_out.jpg-869953f26a30f15e4bbe45f3bc276078.ctex"
+uid="uid://m5neike0dm7i"
+path="res://.godot/imported/bunker.jpg-e4478a80ed45abecdbdb3099eed25ec3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bg_forest_out.jpg"
-dest_files=["res://.godot/imported/bg_forest_out.jpg-869953f26a30f15e4bbe45f3bc276078.ctex"]
+source_file="res://assets/backgrounds/bunker.jpg"
+dest_files=["res://.godot/imported/bunker.jpg-e4478a80ed45abecdbdb3099eed25ec3.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd8inmfigvrcp"
-path="res://.godot/imported/bg_plains.jpg-92f36fa7b054a1d13765ff6f0d0e263a.ctex"
+uid="uid://cpwgpcywgagec"
+path="res://.godot/imported/plains.jpg-94d5a22c125d7a6bd90aca1f1883468a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bg_plains.jpg"
-dest_files=["res://.godot/imported/bg_plains.jpg-92f36fa7b054a1d13765ff6f0d0e263a.ctex"]
+source_file="res://assets/backgrounds/plains.jpg"
+dest_files=["res://.godot/imported/plains.jpg-94d5a22c125d7a6bd90aca1f1883468a.ctex"]
 
 [params]
 
