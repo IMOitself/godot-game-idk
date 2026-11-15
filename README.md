@@ -56,8 +56,14 @@ u are a magnet golem. that collects metal scraps for the mother golem.
 </details>
 
 </details>
-<br><br>
 
+<details><summary><h2>devlog</h2></summary>
+
+### SUNDAY - 4 hours and 41 minutes
+not much stuff but i learned how to do stuff with camera and properly place the character so that i can add buttons on the lower half of screen in the future
+
+</details>
+<br><br>
 
 ## running the thing:
 ```
