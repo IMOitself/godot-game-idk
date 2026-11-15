@@ -63,6 +63,19 @@ u are a magnet golem. that collects metal scraps for the mother golem.
 not much stuff but i learned how to do stuff with camera and properly place the character so that i can add buttons on the lower half of screen in the future
 
 </details>
+
+<details><summary><h2>TODO</h2></summary>
+
+- add tp to other floors specially the hotel section, pass the camera
+- add dialog to secret_one npc on enter
+- left and right button
+- random spawn of items on the map
+- item rarity index
+- give it to secret_one for trading
+- boss battle to unlock other levels
+- music
+
+</details>
 <br><br>
 
 ## running the thing:
