@@ -7,6 +7,12 @@ const JUMP_VELOCITY = -200
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 var is_interacting: bool = false
 
+# o-o-o-o-o-o-o-o-o-o-o-o-o-o-o
+#
+# ANIMATIONS AND INPUTS LOGIC
+#
+# o-o-o-o-o-o-o-o-o-o-o-o-o-o-o
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor(): velocity += get_gravity() * delta
 	
@@ -41,7 +47,11 @@ func _on_animation_finished():
 	if anim.animation == "interact":
 		is_interacting = false
 
+# o-o-o-o-o-o-o-o-o-o-o-o-o-o-o
+#
 # SELECTABLE ITEMS LOGIC
+#
+# o-o-o-o-o-o-o-o-o-o-o-o-o-o-o
 
 var selected_item = null
 
@@ -57,4 +67,4 @@ func _on_item_exited(item):
 		selected_item.scale = Vector2(1, 1)
 		selected_item = null
 
-# =========================
+# o-o-o-o-o-o-o-o-o-o-o-o-o-o-o
