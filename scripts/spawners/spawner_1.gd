@@ -25,9 +25,9 @@ func spawn_item():
 	var item = ITEM.instantiate()
 	item.position = collision_shape.position + Vector2(x, SPAWN_Y)
 	item.add_to_group("items")
-	var game = get_tree().current_scene
-	item.entered.connect(game._on_item_entered)
-	item.exited.connect(game._on_item_exited)
+	var player = get_tree().current_scene.get_node("player")
+	item.entered.connect(player._on_item_entered)
+	item.exited.connect(player._on_item_exited)
 	add_child(item)
 
 func clear_all_items():

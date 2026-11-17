@@ -11,6 +11,14 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_hqtel")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hqtel")
 }, {
 "duration": 1.0,
 "texture": ExtResource("2_sweqy")
@@ -21,25 +29,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_1jxqw")
 }],
-"loop": 0,
-"name": &"attack",
+"loop": 1,
+"name": &"interact",
 "speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_hqtel")
-}],
-"loop": 1,
-"name": &"idle",
-"speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_2hs0m")
-}],
-"loop": 1,
-"name": &"jump",
-"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w5ctp"]
@@ -50,7 +42,7 @@ script = ExtResource("1_sweqy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=891852371]
 sprite_frames = SubResource("SpriteFrames_jpwme")
-animation = &"attack"
+animation = &"interact"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=909402360]
 position = Vector2(3.5, 58)
