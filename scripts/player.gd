@@ -5,7 +5,7 @@ const SPEED = 800.0
 const JUMP_VELOCITY = -200
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
-var is_attacking: bool = false
+var is_interacting: bool = false
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor(): velocity += get_gravity() * delta
@@ -26,20 +26,20 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func handle_anims():
-	if Input.is_action_just_pressed("attack") and not is_attacking:
-		is_attacking = true
-		anim.play("attack")
+	if Input.is_action_just_pressed("interact") and not is_interacting:
+		is_interacting = true
+		anim.play("interact")
 		await anim.animation_finished
-		is_attacking = false
+		is_interacting = false
 		
-	if is_attacking:
+	if is_interacting:
 		return
 	
 	anim.play("idle")
 	
 func _on_animation_finished():
-	if anim.animation == "attack":
-		is_attacking = false
+	if anim.animation == "interact":
+		is_interacting = false
 
 # SELECTABLE ITEMS LOGIC
 
