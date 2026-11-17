@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://o80bp4ovoq7s" path="res://assets/backgrounds/refugee.jpg" id="6_dinhu"]
 [ext_resource type="PackedScene" uid="uid://c0k1eree8sw2i" path="res://scenes/secret_one.tscn" id="8_gee14"]
 [ext_resource type="Script" uid="uid://ciahr1ruj3awe" path="res://scripts/on_left_edge.gd" id="9_0tnpc"]
+[ext_resource type="Script" uid="uid://cb5o20jvw65sj" path="res://scripts/spawners/spawner_1.gd" id="10_vtaks"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kvuet"]
 texture = ExtResource("1_u5sy4")
@@ -62,14 +63,18 @@ size = Vector2(757, 925)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w5ctp"]
 size = Vector2(1550, 2059)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qa133"]
+size = Vector2(5829, 933)
+
 [node name="game" type="Node2D" unique_id=49382964]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=309437503]
-tile_map_data = PackedByteArray("AAAAAP//BgAAAAAAAAABAP//BgAAAAAAAAACAP//BgAAAAAAAAADAP//BgAAAAAAAAAEAP//AgAAAAAAAAAFAP//AgAAAAAAAAAGAP//AgAAAAAAAAAHAP//AgAAAAAAAAAIAP//BAAAAAAAAAAJAP//BAAAAAAAAAAKAP//BAAAAAAAAAALAP//BAAAAAAAAAAMAP//AQAAAAAAAAANAP//AQAAAAAAAAAOAP//AQAAAAAAAAAPAP//AQAAAAAAAAAPAP7/BQAAAAAAAAAQAP7/BQAAAAAAAAARAP7/BQAAAAAAAAASAP7/BQAAAAAAAAATAP7/AwAAAAAAAAAUAP7/AwAAAAAAAAAVAP7/AwAAAAAAAAAWAP7/AwAAAAAAAAAXAP7/BAAAAAAAAAAYAP7/BAAAAAAAAAAZAP7/BAAAAAAAAAAaAP7/BAAAAAAAAAAbAP7/AQAAAAAAAAAcAP7/AQAAAAAAAAAdAP7/AQAAAAAAAAAeAP7/AQAAAAAAAAAfAP7/BgAAAAAAAAAfAP3/BgAAAAAAAAAfAPz/BgAAAAAAAAAfAPv/BgAAAAAAAAAfAPr/BgAAAAAAAAAfAPn/BQAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAAP//BgAAAAAAAAABAP//BgAAAAAAAAACAP//BgAAAAAAAAADAP//BgAAAAAAAAAEAP//AQAAAAAAAAAFAP//AgAAAAAAAAAGAP//AgAAAAAAAAAHAP//AgAAAAAAAAAIAP//AQAAAAAAAAAJAP//BAAAAAAAAAAKAP//BAAAAAAAAAALAP//BAAAAAAAAAAMAP//BgAAAAAAAAANAP//AQAAAAAAAAAOAP//AQAAAAAAAAAPAP//AQAAAAAAAAATAP7/BQAAAAAAAAAUAP7/AQAAAAAAAAAVAP7/AwAAAAAAAAAWAP7/AwAAAAAAAAAXAP7/AwAAAAAAAAAYAP7/AQAAAAAAAAAZAP7/BAAAAAAAAAAaAP7/BAAAAAAAAAAbAP7/BAAAAAAAAAAcAP7/BgAAAAAAAAAdAP7/AQAAAAAAAAAeAP7/AQAAAAAAAAAfAP7/AQAAAAAAAAAQAP//BgAAAAAAAAASAP7/BQAAAAAAAAARAP7/BQAAAAAAAAAgAP7/BQAAAAAAAAAhAP7/BgAAAAAAAAAhAP3/BgAAAAAAAAAhAPz/BgAAAAAAAAAhAPv/BgAAAAAAAAAhAPr/BgAAAAAAAAAhAPn/BQAAAAAAAAAAAP7/BgAAAAAAAAABAP7/BgAAAAAAAAARAP//AQAAAAAAAAA=")
 tile_set = SubResource("TileSet_jpwme")
 
 [node name="player" parent="." unique_id=2029330779 instance=ExtResource("5_0tnpc")]
-position = Vector2(1705, -1433)
+position = Vector2(1705, -1339)
+scale = Vector2(0.7, 0.7)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=2109289565]
 position = Vector2(-10, 1)
@@ -84,7 +89,8 @@ position_smoothing_enabled = true
 [node name="secretone" type="Node" parent="." unique_id=1482280895]
 
 [node name="secretone" parent="secretone" unique_id=1166651067 instance=ExtResource("8_gee14")]
-position = Vector2(521, -1433)
+position = Vector2(521, -1339)
+scale = Vector2(0.7, 0.7)
 
 [node name="stop-from-kissing-it" type="StaticBody2D" parent="secretone" unique_id=896835713]
 
@@ -100,3 +106,12 @@ camera = NodePath("../player/Camera2D")
 [node name="left_edge" type="CollisionShape2D" parent="on_left_edge" unique_id=2051581908]
 position = Vector2(207, 0)
 shape = SubResource("RectangleShape2D_w5ctp")
+
+[node name="spawners" type="Node" parent="." unique_id=878847307]
+
+[node name="spawner1" type="Area2D" parent="spawners" unique_id=578948275]
+script = ExtResource("10_vtaks")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spawners/spawner1" unique_id=811939157]
+position = Vector2(5186.5, -1585.5)
+shape = SubResource("RectangleShape2D_qa133")

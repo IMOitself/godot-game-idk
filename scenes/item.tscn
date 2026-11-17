@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://d033d4poyb1a"]
+
+[ext_resource type="Texture2D" uid="uid://ecf735nhah5j" path="res://assets/items/item.png" id="1_4gq7n"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jpwme"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4gq7n")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5ctp"]
+size = Vector2(151, 108)
+
+[node name="item" type="Area2D" unique_id=1869709803]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=891852371]
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_jpwme")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=909402360]
+position = Vector2(-5.4999995, 54.999996)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_w5ctp")
