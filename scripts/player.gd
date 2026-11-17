@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-
 const SPEED = 800.0
 const JUMP_VELOCITY = -200
+var selected_item = null
 
 # ============================================================
 #
@@ -10,14 +10,14 @@ const JUMP_VELOCITY = -200
 #
 # ============================================================
 
+func interact():
+	print("beep")
 
 # ============================================================
 #
 # SELECTABLE ITEMS LOGIC
 #
 # ============================================================
-
-var selected_item = null
 
 func _on_item_entered(item):
 	# old
@@ -65,6 +65,7 @@ func handle_anims():
 		anim.play("interact")
 		await anim.animation_finished
 		is_interacting = false
+		interact()
 
 	if not is_interacting: anim.play("idle")
 	

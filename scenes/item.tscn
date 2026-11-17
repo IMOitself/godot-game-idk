@@ -15,7 +15,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w5ctp"]
-size = Vector2(173.33334, 130)
+size = Vector2(173.33334, 726.6666)
 
 [node name="item" type="Area2D" unique_id=1869709803]
 script = ExtResource("1_s8enn")
@@ -27,6 +27,6 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=909402360]
-position = Vector2(-0.9999962, 60.499996)
+position = Vector2(-0.9999962, -29.000004)
 scale = Vector2(0.3, 0.3)
 shape = SubResource("RectangleShape2D_w5ctp")
