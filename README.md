@@ -62,6 +62,9 @@ u are a magnet golem. that collects metal scraps for the secret one.
 ### SUNDAY - 4 hours and 41 minutes
 not much stuff but i learned how to do stuff with camera and properly place the character so that i can add buttons on the lower half of screen in the future
 
+### TUESDAY - 4 hours and 19 minutes
+randomly spawn items and put it on top of head 
+
 </details>
 
 <details><summary><h2>TODO</h2></summary>
