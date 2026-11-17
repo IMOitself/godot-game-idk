@@ -1,7 +1,7 @@
 extends Area2D
 
 const ITEM = preload("uid://d033d4poyb1a")
-const SPAWN_Y: float = 350
+const SPAWN_Y = 400
 
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
 
