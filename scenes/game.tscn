@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://o80bp4ovoq7s" path="res://assets/backgrounds/refugee.jpg" id="6_dinhu"]
 [ext_resource type="PackedScene" uid="uid://c0k1eree8sw2i" path="res://scenes/secret_one.tscn" id="8_gee14"]
 [ext_resource type="Script" uid="uid://ciahr1ruj3awe" path="res://scripts/on_left_edge.gd" id="9_0tnpc"]
-[ext_resource type="PackedScene" uid="uid://d033d4poyb1a" path="res://scenes/item.tscn" id="9_dinhu"]
 [ext_resource type="Script" uid="uid://cb5o20jvw65sj" path="res://scripts/spawners/spawner_1.gd" id="10_vtaks"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kvuet"]
@@ -95,10 +94,6 @@ limit_bottom = 0
 limit_smoothed = true
 position_smoothing_enabled = true
 
-[node name="item" parent="player" unique_id=1869709803 instance=ExtResource("9_dinhu")]
-position = Vector2(-10, -448.5714)
-scale = Vector2(0.99999994, 0.99999994)
-
 [node name="count" type="Label" parent="player" unique_id=874603895]
 offset_left = -135.71432
 offset_top = -712.8572
@@ -108,6 +103,10 @@ text = "1"
 label_settings = SubResource("LabelSettings_jpwme")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="last_pickupped_item" type="Area2D" parent="player" unique_id=172940122]
+position = Vector2(-10, -448.5714)
+scale = Vector2(0.99999994, 0.99999994)
 
 [node name="secretone" type="Node" parent="." unique_id=1482280895]
 
