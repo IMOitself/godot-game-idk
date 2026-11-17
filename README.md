@@ -6,7 +6,7 @@
 
 take something and bring it back to base.
 
-u are a magnet golem. that collects metal scraps for the mother golem.
+u are a magnet golem. that collects metal scraps for the secret one.
 
 
 <details><summary>map</summary>
@@ -69,9 +69,13 @@ not much stuff but i learned how to do stuff with camera and properly place the 
 - add tp to other floors specially the hotel section, pass the camera
 - add dialog to secret_one npc on enter
 - left and right button
-- random spawn of items on the map
+- ~~random spawn of items on the map~~
+- pickup and carry item
+- give it to secret_one quest (counter i.e 4/5)
+- walking adds speed
+- carrying adds strength
+- secret one quests (build auto train strength and speed)
 - item rarity index
-- give it to secret_one for trading
 - boss battle to unlock other levels
 - music
 
