@@ -1,0 +1,16 @@
+extends Area2D
+
+signal entered(item)
+signal exited(item)
+
+func _ready() -> void:
+	body_entered.connect(_on_body_entered)
+	body_exited.connect(_on_body_exited)
+
+func _on_body_entered(body):
+	if body.name == "player":
+		entered.emit(self)
+
+func _on_body_exited(body):
+	if body.name == "player":
+		exited.emit(self)

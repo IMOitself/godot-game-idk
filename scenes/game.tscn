@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://cowqwac3otksl"]
 
+[ext_resource type="Script" uid="uid://djlb1nrpaewbf" path="res://scripts/game.gd" id="1_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://m5neike0dm7i" path="res://assets/backgrounds/bunker.jpg" id="1_u5sy4"]
 [ext_resource type="Texture2D" uid="uid://c4mcfduxgsjru" path="res://assets/backgrounds/cavern.jpg" id="2_gee14"]
 [ext_resource type="Texture2D" uid="uid://40b1piywu44e" path="res://assets/backgrounds/forest.jpg" id="3_0tnpc"]
@@ -58,18 +59,19 @@ sources/5 = SubResource("TileSetAtlasSource_rysoc")
 sources/6 = SubResource("TileSetAtlasSource_ssvqc")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jpwme"]
-size = Vector2(757, 925)
+size = Vector2(500, 925)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w5ctp"]
-size = Vector2(1550, 2059)
+size = Vector2(1142, 2059)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qa133"]
-size = Vector2(5829, 933)
+size = Vector2(4674, 933)
 
 [node name="game" type="Node2D" unique_id=49382964]
+script = ExtResource("1_kvpfn")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=309437503]
-tile_map_data = PackedByteArray("AAAAAP//BgAAAAAAAAABAP//BgAAAAAAAAACAP//BgAAAAAAAAADAP//BgAAAAAAAAAEAP//AQAAAAAAAAAFAP//AgAAAAAAAAAGAP//AgAAAAAAAAAHAP//AgAAAAAAAAAIAP//AQAAAAAAAAAJAP//BAAAAAAAAAAKAP//BAAAAAAAAAALAP//BAAAAAAAAAAMAP//BgAAAAAAAAANAP//AQAAAAAAAAAOAP//AQAAAAAAAAAPAP//AQAAAAAAAAATAP7/BQAAAAAAAAAUAP7/AQAAAAAAAAAVAP7/AwAAAAAAAAAWAP7/AwAAAAAAAAAXAP7/AwAAAAAAAAAYAP7/AQAAAAAAAAAZAP7/BAAAAAAAAAAaAP7/BAAAAAAAAAAbAP7/BAAAAAAAAAAcAP7/BgAAAAAAAAAdAP7/AQAAAAAAAAAeAP7/AQAAAAAAAAAfAP7/AQAAAAAAAAAQAP//BgAAAAAAAAASAP7/BQAAAAAAAAARAP7/BQAAAAAAAAAgAP7/BQAAAAAAAAAhAP7/BgAAAAAAAAAhAP3/BgAAAAAAAAAhAPz/BgAAAAAAAAAhAPv/BgAAAAAAAAAhAPr/BgAAAAAAAAAhAPn/BQAAAAAAAAAAAP7/BgAAAAAAAAABAP7/BgAAAAAAAAARAP//AQAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAAP//BgAAAAAAAAABAP//BgAAAAAAAAACAP//BgAAAAAAAAADAP//BgAAAAAAAAAEAP//AQAAAAAAAAAFAP//AgAAAAAAAAAGAP//AgAAAAAAAAAHAP//AgAAAAAAAAAIAP//AQAAAAAAAAAJAP//BAAAAAAAAAAKAP//BAAAAAAAAAALAP//BAAAAAAAAAAMAP//BgAAAAAAAAANAP//AQAAAAAAAAAOAP//AQAAAAAAAAAPAP//AQAAAAAAAAATAP7/BQAAAAAAAAAUAP7/AQAAAAAAAAAVAP7/AwAAAAAAAAAWAP7/AwAAAAAAAAAXAP7/AwAAAAAAAAAYAP7/AQAAAAAAAAAZAP7/BAAAAAAAAAAaAP7/BAAAAAAAAAAbAP7/BAAAAAAAAAAcAP7/BgAAAAAAAAAdAP7/AQAAAAAAAAAeAP7/AQAAAAAAAAAfAP7/AQAAAAAAAAAQAP//BgAAAAAAAAASAP7/BQAAAAAAAAARAP7/BQAAAAAAAAAgAP7/BQAAAAAAAAAhAP7/BgAAAAAAAAAhAP3/BgAAAAAAAAAhAPz/BgAAAAAAAAAhAPv/BgAAAAAAAAAhAPr/BgAAAAAAAAAhAPn/BQAAAAAAAAAAAP7/BgAAAAAAAAABAP7/BgAAAAAAAAARAP//AQAAAAAAAAD/////BgAAAAAAAAA=")
 tile_set = SubResource("TileSet_jpwme")
 
 [node name="player" parent="." unique_id=2029330779 instance=ExtResource("5_0tnpc")]
@@ -89,13 +91,13 @@ position_smoothing_enabled = true
 [node name="secretone" type="Node" parent="." unique_id=1482280895]
 
 [node name="secretone" parent="secretone" unique_id=1166651067 instance=ExtResource("8_gee14")]
-position = Vector2(521, -1339)
+position = Vector2(337, -1339)
 scale = Vector2(0.7, 0.7)
 
 [node name="stop-from-kissing-it" type="StaticBody2D" parent="secretone" unique_id=896835713]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="secretone/stop-from-kissing-it" unique_id=250990363]
-position = Vector2(375.5, -1581.5)
+position = Vector2(247, -1581.5)
 shape = SubResource("RectangleShape2D_jpwme")
 
 [node name="on_left_edge" type="Area2D" parent="." unique_id=232701968 node_paths=PackedStringArray("camera")]
@@ -104,7 +106,7 @@ script = ExtResource("9_0tnpc")
 camera = NodePath("../player/Camera2D")
 
 [node name="left_edge" type="CollisionShape2D" parent="on_left_edge" unique_id=2051581908]
-position = Vector2(207, 0)
+position = Vector2(3, 0)
 shape = SubResource("RectangleShape2D_w5ctp")
 
 [node name="spawners" type="Node" parent="." unique_id=878847307]
@@ -113,5 +115,5 @@ shape = SubResource("RectangleShape2D_w5ctp")
 script = ExtResource("10_vtaks")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spawners/spawner1" unique_id=811939157]
-position = Vector2(5186.5, -1585.5)
+position = Vector2(5764, -1585.5)
 shape = SubResource("RectangleShape2D_qa133")

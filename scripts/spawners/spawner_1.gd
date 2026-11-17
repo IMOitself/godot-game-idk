@@ -5,16 +5,16 @@ const SPAWN_Y = 400
 
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
 
-func _ready() -> void:
-	body_entered.connect(_on_body_entered)
-	body_exited.connect(_on_body_exited)
+func _ready():
+	body_entered.connect(_on_spawner_entered)
+	body_exited.connect(_on_spawner_exited)
 
-func _on_body_entered(body):
+func _on_spawner_entered(body):
 	if body.name == "player":
 		for i in range(10):
 			spawn_item()
 
-func _on_body_exited(body):
+func _on_spawner_exited(body):
 	if body.name == "player":
 		clear_all_items()
 
@@ -25,9 +25,10 @@ func spawn_item():
 	var item = ITEM.instantiate()
 	item.position = collision_shape.position + Vector2(x, SPAWN_Y)
 	item.add_to_group("items")
+	var game = get_tree().current_scene
+	item.entered.connect(game._on_item_entered)
+	item.exited.connect(game._on_item_exited)
 	add_child(item)
 
 func clear_all_items():
-	for child in get_children():
-		if child.is_in_group("items"):
-			child.queue_free()
+	for child in get_children(): if child.is_in_group("items"): child.queue_free()

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d033d4poyb1a"]
 
 [ext_resource type="Texture2D" uid="uid://ecf735nhah5j" path="res://assets/items/item.png" id="1_4gq7n"]
+[ext_resource type="Script" uid="uid://biwdcp23fimbh" path="res://scripts/item.gd" id="1_s8enn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jpwme"]
 animations = [{
@@ -14,16 +15,18 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w5ctp"]
-size = Vector2(939.99994, 433.33328)
+size = Vector2(173.33334, 130)
 
 [node name="item" type="Area2D" unique_id=1869709803]
+script = ExtResource("1_s8enn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=891852371]
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_jpwme")
 animation = &"idle"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=909402360]
-position = Vector2(1.0000005, 15.000004)
+position = Vector2(-0.9999962, 60.499996)
 scale = Vector2(0.3, 0.3)
 shape = SubResource("RectangleShape2D_w5ctp")
