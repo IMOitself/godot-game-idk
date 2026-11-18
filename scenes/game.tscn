@@ -74,7 +74,6 @@ tile_map_data = PackedByteArray("AAAAAP//BgAAAAAAAAABAP//BgAAAAAAAAACAP//BgAAAAA
 tile_set = SubResource("TileSet_jpwme")
 
 [node name="player" parent="." unique_id=2029330779 groups=["player"] instance=ExtResource("5_0tnpc")]
-z_index = 50
 position = Vector2(1705, -1339)
 scale = Vector2(0.7, 0.7)
 

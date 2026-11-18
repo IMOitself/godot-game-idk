@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://biwdcp23fimbh" path="res://scripts/item.gd" id="1_x0jxx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jpwme"]
-size = Vector2(396, 769)
+size = Vector2(396, 485)
 
 [node name="item" type="RigidBody2D" unique_id=1461723616]
 script = ExtResource("1_x0jxx")
@@ -13,13 +13,13 @@ script = ExtResource("1_x0jxx")
 texture = ExtResource("1_w3g62")
 
 [node name="rigidbody_collision" type="CollisionShape2D" parent="." unique_id=1933595592]
-position = Vector2(-6, -98.5)
+position = Vector2(-6, 40.5)
 shape = SubResource("RectangleShape2D_jpwme")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=63915436]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=808741927]
-position = Vector2(-6, -98.5)
+position = Vector2(-6, 43.5)
 shape = SubResource("RectangleShape2D_jpwme")
 
 [connection signal="ready" from="." to="." method="_on_ready"]
