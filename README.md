@@ -1,6 +1,11 @@
-# idk yet
+# the unfinished useless game
+i never finished the game. i suck ;-;
+
 
 <img width="326" height="576" alt="download" src="https://github.com/user-attachments/assets/43d3d361-fd83-4084-9613-5088e6eaa1f1" />
+<br>
+<img width="480" height="1076" alt="download (2)" src="https://github.com/user-attachments/assets/f2dd39f2-0955-4ca4-8703-135ddc2d5a70" />
+
 
 <details><summary><h2>brainstorming</h2></summary>
 
@@ -89,6 +94,9 @@ learned how to properly pick up and drop, add ui buttons and deploy game to gith
 <br><br>
 
 ## running the thing:
+either go to https://imoitself.github.io/godot-game-idk/ 
+
+or clone this repo and do
 ```
 cd ./exports/web
 ```
