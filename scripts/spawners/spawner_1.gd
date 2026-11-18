@@ -20,7 +20,7 @@ func _on_spawner_exited(body):
 
 func spawn_item():
 	var half_width = collision_shape.shape.size.x / 2
-	var x = randf_range(-half_width + 300, half_width - 300)
+	var x = randf_range(-half_width + 1200, half_width - 300)
 	
 	var item = ITEM.instantiate()
 	item.add_to_group("items")

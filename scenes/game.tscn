@@ -61,10 +61,10 @@ sources/6 = SubResource("TileSetAtlasSource_ssvqc")
 size = Vector2(500, 925)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w5ctp"]
-size = Vector2(1142, 2059)
+size = Vector2(1534, 2059)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qa133"]
-size = Vector2(4674, 933)
+size = Vector2(35139, 933)
 
 [node name="game" type="Node2D" unique_id=49382964]
 
@@ -105,7 +105,7 @@ script = ExtResource("9_0tnpc")
 camera = NodePath("../player/Camera2D")
 
 [node name="left_edge" type="CollisionShape2D" parent="on_left_edge" unique_id=2051581908]
-position = Vector2(3, 0)
+position = Vector2(199, 0)
 shape = SubResource("RectangleShape2D_w5ctp")
 
 [node name="spawners" type="Node" parent="." unique_id=878847307]
@@ -114,5 +114,5 @@ shape = SubResource("RectangleShape2D_w5ctp")
 script = ExtResource("10_vtaks")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spawners/spawner1" unique_id=811939157]
-position = Vector2(5764, -1585.5)
+position = Vector2(19198.5, -1585.5)
 shape = SubResource("RectangleShape2D_qa133")
