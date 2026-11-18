@@ -35,8 +35,6 @@ func get_direction():
 func _physics_process(delta: float) -> void:
 	if not is_on_floor(): velocity += get_gravity() * delta
 	
-	handle_anims()
-	
 	var direction := Input.get_axis("move_left", "move_right")
 	
 	if direction == -1: anim.flip_h = true
@@ -50,15 +48,17 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-func handle_anims():
-	if Input.is_action_just_pressed("interact") and not is_interacting:
-		is_interacting = true
-		anim.play("interact")
-		await anim.animation_finished
-		is_interacting = false
-
-	if not is_interacting: anim.play("idle")
+func play_interact_anim():
+	is_interacting = true
+	anim.play("interact")
+	await anim.animation_finished
+	is_interacting = false
+	anim.play("idle")
 	
 func _on_animation_finished():
 	if anim.animation == "interact":
 		is_interacting = false
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("interact") and not is_interacting:
+		play_interact_anim()

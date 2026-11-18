@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://by44e7yb3mpwy"]
+
+[ext_resource type="Script" uid="uid://cjacprtkyt0ar" path="res://scripts/control.gd" id="1_5p55f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5p55f"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r67kn"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_brbbq"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="Control" type="Control" unique_id=1241852632]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5p55f")
+
+[node name="left" type="PanelContainer" parent="." unique_id=2142851999]
+layout_mode = 0
+offset_top = 939.0
+offset_right = 288.0
+offset_bottom = 1920.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5p55f")
+
+[node name="interact" type="PanelContainer" parent="." unique_id=69152366]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 939.0
+offset_right = 792.0
+offset_bottom = 1920.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_r67kn")
+
+[node name="right" type="PanelContainer" parent="." unique_id=1089808897]
+layout_mode = 0
+offset_left = 792.0
+offset_top = 939.0
+offset_right = 1080.0
+offset_bottom = 1920.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_brbbq")
