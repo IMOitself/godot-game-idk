@@ -44,15 +44,15 @@ func _input(event: InputEvent) -> void:
 		scale = Vector2.ONE
 		freeze = false
 		rigidbody_collision.disabled = false
-		var xForce = player.get_direction() * 400
-		apply_impulse(Vector2(xForce, 200))
+		var xForce = player.get_direction() * 500
+		apply_impulse(Vector2(xForce, 800))
 
 func _pickup_animation():
 	var player = get_tree().get_first_node_in_group("player")
 	player.pick_up(animationTime)
 	
 	var tween = get_tree().create_tween()
-	tween.tween_property(self, "global_position", player.global_position + Vector2(0, -100), animationTime)
+	tween.tween_property(self, "global_position", player.global_position + Vector2(0, -300), animationTime)
 	await tween.finished
 	
 	reparent(player)
