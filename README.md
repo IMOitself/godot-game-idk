@@ -1,4 +1,5 @@
 # the unfinished useless game
+## https://imoitself.github.io/godot-game-idk/ 
 i never finished the game. i suck ;-;
 
 
