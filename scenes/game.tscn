@@ -1,6 +1,5 @@
 [gd_scene format=4 uid="uid://cowqwac3otksl"]
 
-[ext_resource type="Script" uid="uid://djlb1nrpaewbf" path="res://scripts/game.gd" id="1_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://m5neike0dm7i" path="res://assets/backgrounds/bunker.jpg" id="1_u5sy4"]
 [ext_resource type="Texture2D" uid="uid://c4mcfduxgsjru" path="res://assets/backgrounds/cavern.jpg" id="2_gee14"]
 [ext_resource type="Texture2D" uid="uid://40b1piywu44e" path="res://assets/backgrounds/forest.jpg" id="3_0tnpc"]
@@ -58,11 +57,6 @@ sources/4 = SubResource("TileSetAtlasSource_ca42v")
 sources/5 = SubResource("TileSetAtlasSource_rysoc")
 sources/6 = SubResource("TileSetAtlasSource_ssvqc")
 
-[sub_resource type="LabelSettings" id="LabelSettings_jpwme"]
-font_size = 128
-outline_size = 16
-outline_color = Color(0, 0, 0, 1)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jpwme"]
 size = Vector2(500, 925)
 
@@ -73,13 +67,12 @@ size = Vector2(1142, 2059)
 size = Vector2(4674, 933)
 
 [node name="game" type="Node2D" unique_id=49382964]
-script = ExtResource("1_kvpfn")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=309437503]
 tile_map_data = PackedByteArray("AAAAAP//BgAAAAAAAAABAP//BgAAAAAAAAACAP//BgAAAAAAAAADAP//BgAAAAAAAAAEAP//AQAAAAAAAAAFAP//AgAAAAAAAAAGAP//AgAAAAAAAAAHAP//AgAAAAAAAAAIAP//AQAAAAAAAAAJAP//BAAAAAAAAAAKAP//BAAAAAAAAAALAP//BAAAAAAAAAAMAP//BgAAAAAAAAANAP//AQAAAAAAAAAOAP//AQAAAAAAAAAPAP//AQAAAAAAAAATAP7/BQAAAAAAAAAUAP7/AQAAAAAAAAAVAP7/AwAAAAAAAAAWAP7/AwAAAAAAAAAXAP7/AwAAAAAAAAAYAP7/AQAAAAAAAAAZAP7/BAAAAAAAAAAaAP7/BAAAAAAAAAAbAP7/BAAAAAAAAAAcAP7/BgAAAAAAAAAdAP7/AQAAAAAAAAAeAP7/AQAAAAAAAAAfAP7/AQAAAAAAAAAQAP//BgAAAAAAAAASAP7/BQAAAAAAAAARAP7/BQAAAAAAAAAgAP7/BQAAAAAAAAAhAP7/BgAAAAAAAAAhAP3/BgAAAAAAAAAhAPz/BgAAAAAAAAAhAPv/BgAAAAAAAAAhAPr/BgAAAAAAAAAhAPn/BQAAAAAAAAAAAP7/BgAAAAAAAAABAP7/BgAAAAAAAAARAP//AQAAAAAAAAD/////BgAAAAAAAAA=")
 tile_set = SubResource("TileSet_jpwme")
 
-[node name="player" parent="." unique_id=2029330779 instance=ExtResource("5_0tnpc")]
+[node name="player" parent="." unique_id=2029330779 groups=["player"] instance=ExtResource("5_0tnpc")]
 z_index = 50
 position = Vector2(1705, -1339)
 scale = Vector2(0.7, 0.7)
@@ -93,20 +86,6 @@ limit_right = 9998926
 limit_bottom = 0
 limit_smoothed = true
 position_smoothing_enabled = true
-
-[node name="count" type="Label" parent="player" unique_id=874603895]
-offset_left = -135.71432
-offset_top = -712.8572
-offset_right = 117.14285
-offset_bottom = -537.8572
-text = "1"
-label_settings = SubResource("LabelSettings_jpwme")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="last_pickupped_item" type="Area2D" parent="player" unique_id=172940122]
-position = Vector2(-10, -448.5714)
-scale = Vector2(0.99999994, 0.99999994)
 
 [node name="secretone" type="Node" parent="." unique_id=1482280895]
 
