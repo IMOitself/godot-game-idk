@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgh0kqctv62x"
-path="res://.godot/imported/godot-clicker-game.png-1b9881fcfd8dc5cdbf4d19baf72ac55a.ctex"
+path="res://.godot/imported/godot-clicker-game.png-aad8dd20211503d14d2163df5c23125b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://exports/web/godot-clicker-game.png"
-dest_files=["res://.godot/imported/godot-clicker-game.png-1b9881fcfd8dc5cdbf4d19baf72ac55a.ctex"]
+source_file="res://docs/godot-clicker-game.png"
+dest_files=["res://.godot/imported/godot-clicker-game.png-aad8dd20211503d14d2163df5c23125b.ctex"]
 
 [params]
 
