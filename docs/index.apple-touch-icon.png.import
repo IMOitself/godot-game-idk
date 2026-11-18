@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ydwxth6nbvpm"
-path="res://.godot/imported/godot-clicker-game.icon.png-59205a957c8fb722ef2fcb8ae06e1a08.ctex"
+uid="uid://mgnh84yc74qf"
+path="res://.godot/imported/index.apple-touch-icon.png-b21a756d869f84af832970a74d8371bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://docs/godot-clicker-game.icon.png"
-dest_files=["res://.godot/imported/godot-clicker-game.icon.png-59205a957c8fb722ef2fcb8ae06e1a08.ctex"]
+source_file="res://docs/index.apple-touch-icon.png"
+dest_files=["res://.godot/imported/index.apple-touch-icon.png-b21a756d869f84af832970a74d8371bc.ctex"]
 
 [params]
 
