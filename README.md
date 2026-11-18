@@ -65,6 +65,9 @@ not much stuff but i learned how to do stuff with camera and properly place the 
 ### TUESDAY - 4 hours and 19 minutes
 randomly spawn items and put it on top of head 
 
+### WEDNESDAY - idk hours
+learned how to properly pick up and drop, add ui buttons and deploy game to github
+
 </details>
 
 <details><summary><h2>TODO</h2></summary>
