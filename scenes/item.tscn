@@ -1,32 +1,28 @@
-[gd_scene format=3 uid="uid://d033d4poyb1a"]
+[gd_scene format=3 uid="uid://duayalk25sbkd"]
 
-[ext_resource type="Texture2D" uid="uid://ecf735nhah5j" path="res://assets/items/item.png" id="1_4gq7n"]
-[ext_resource type="Script" uid="uid://biwdcp23fimbh" path="res://scripts/item.gd" id="1_s8enn"]
+[ext_resource type="Texture2D" uid="uid://ecf735nhah5j" path="res://assets/items/item.png" id="1_w3g62"]
+[ext_resource type="Script" uid="uid://biwdcp23fimbh" path="res://scripts/item.gd" id="1_x0jxx"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_jpwme"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_4gq7n")
-}],
-"loop": 1,
-"name": &"idle",
-"speed": 8.0
-}]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jpwme"]
+size = Vector2(396, 769)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5ctp"]
-size = Vector2(173.33334, 726.6666)
+[node name="item" type="RigidBody2D" unique_id=1461723616]
+script = ExtResource("1_x0jxx")
 
-[node name="item" type="Area2D" unique_id=1869709803]
-script = ExtResource("1_s8enn")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=623869612]
+texture = ExtResource("1_w3g62")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=891852371]
-scale = Vector2(0.3, 0.3)
-sprite_frames = SubResource("SpriteFrames_jpwme")
-animation = &"idle"
-autoplay = "idle"
+[node name="rigidbody_collision" type="CollisionShape2D" parent="." unique_id=1933595592]
+position = Vector2(-6, -98.5)
+shape = SubResource("RectangleShape2D_jpwme")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=909402360]
-position = Vector2(-0.9999962, -29.000004)
-scale = Vector2(0.3, 0.3)
-shape = SubResource("RectangleShape2D_w5ctp")
+[node name="Area2D" type="Area2D" parent="." unique_id=63915436]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=808741927]
+position = Vector2(-6, -98.5)
+shape = SubResource("RectangleShape2D_jpwme")
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="ready" from="Area2D" to="." method="_on_area_2d_ready"]

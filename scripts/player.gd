@@ -4,8 +4,10 @@ const SPEED = 800.0
 const JUMP_VELOCITY = -200
 var selected_item = null
 var pickupped_item = null
+var is_interacting: bool = false
 
 @onready var last_pickupped_item: Area2D = $last_pickupped_item
+@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
 # ============================================================
 #
@@ -29,33 +31,24 @@ func interact():
 	selected_item.queue_free()
 	selected_item = null
 
-# ============================================================
-#
-# SELECTABLE ITEMS LOGIC
-#
-# ============================================================
-
-func _on_item_entered(item):
-	# old
-	if selected_item and selected_item != item:
-		selected_item.scale = Vector2(1, 1)
+func pick_up(duration):
+	set_physics_process(false)
 	
-	selected_item = item
-	selected_item.scale = Vector2(1.1, 1.1)
+	anim.play("interact")
+	
+	await get_tree().create_timer(duration).timeout
+	
+	set_physics_process(true)
 
-func _on_item_exited(item):
-	if selected_item == item:
-		selected_item.scale = Vector2(1, 1)
-		selected_item = null
+func get_direction():
+	if anim.flip_h: return -1
+	else: return 1
 
 # ============================================================
 #
 # ANIMATIONS AND INPUTS LOGIC
 #
 # ============================================================
-
-@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
-var is_interacting: bool = false
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor(): velocity += get_gravity() * delta

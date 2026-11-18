@@ -1,6 +1,6 @@
 extends Area2D
 
-const ITEM = preload("uid://d033d4poyb1a")
+const ITEM = preload("uid://duayalk25sbkd")
 const SPAWN_Y = 400
 
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
@@ -23,11 +23,10 @@ func spawn_item():
 	var x = randf_range(-half_width, half_width)
 	
 	var item = ITEM.instantiate()
-	item.position = collision_shape.position + Vector2(x, SPAWN_Y)
 	item.add_to_group("items")
+	item.scale = Vector2(0.5, 0.5)
+	item.position = collision_shape.position + Vector2(x, SPAWN_Y)
 	var player = get_tree().current_scene.get_node("player")
-	item.entered.connect(player._on_item_entered)
-	item.exited.connect(player._on_item_exited)
 	add_child(item)
 
 func clear_all_items():
